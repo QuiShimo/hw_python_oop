@@ -51,14 +51,11 @@ class Training:
 
     def show_training_info(self) -> InfoMessage:
         """Вернуть информационное сообщение о выполненной тренировке."""
-        distance = self.get_distance()
-        mean_speed = self.get_mean_speed()
-        spent_calories = self.get_spent_calories()
         return InfoMessage(training_type=self.__class__.__name__,
                            duration=self.duration,
-                           distance=distance,
-                           speed=mean_speed,
-                           calories=spent_calories,
+                           distance=self.get_distance(),
+                           speed=self.get_mean_speed(),
+                           calories=self.get_spent_calories(),
                            )
 
 
@@ -139,9 +136,9 @@ WORKOUT_TYPES = {'SWM': Swimming,
 def read_package(workout_type: str, data: list) -> Training:
     """Прочитать данные полученные от датчиков."""
     if workout_type not in WORKOUT_TYPES:
-        raise NotImplementedError('Введеный ключ не существует')
-    else:
-        return WORKOUT_TYPES[workout_type](*data)
+        raise NotImplementedError(f'Введеный ключ {workout_type} не существует'
+                                  f'. Проверьте правильность и повторите ввод')
+    return WORKOUT_TYPES[workout_type](*data)
 
 
 def main(training: Training) -> None:
