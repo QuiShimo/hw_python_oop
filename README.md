@@ -20,20 +20,19 @@
 Python 3.12
 
 ## Инструкции по установке
-1. Клонируйте репозиторий:
+1. Клонируйте репозиторий: 
 ```
 git clone https://github.com/QuiShimo/hw_python_oop.git
 ```
-
-2. Установите и активируйте виртуальное окружение:
-
+2. Установите виртуальное окружение:
 ```
 python -m venv venv
-source venv/bin/activate
-source venv/Scripts/activate
 ```
-
-3. Установите зависимости из файла requirements.txt:
+3. Активируйте виртуальное окружение
+```
+venv\Scripts\activate.bat
+```
+4. Установите зависимости из файла requirements.txt:
 ```
 python -m pip install --upgrade pip
 pip install -r requirements.txt
