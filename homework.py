@@ -43,7 +43,8 @@ class Training:
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
         raise NotImplementedError(
-            f'Определите метод get_spent_calories() в {self.__class__.__name__}'
+            f'Определите метод get_spent_calories()'
+            f' в {self.__class__.__name__}'
         )
 
     def show_training_info(self) -> InfoMessage:
@@ -78,11 +79,7 @@ class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
 
     def __init__(
-            self,
-            action: int,
-            duration: float,
-            weight: float,
-            height: float,
+            self, action: int, duration: float, weight: float, height: float
     ) -> None:
         super().__init__(action, duration, weight)
         self.height = height
