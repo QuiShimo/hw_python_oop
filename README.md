@@ -1,4 +1,5 @@
 # Модуль фитнес-трекера
+[![flake8 and pytest workflow](https://github.com/QuiShimo/hw_python_oop/actions/workflows/main.yml/badge.svg)](https://github.com/QuiShimo/hw_python_oop/actions/workflows/main.yml)
 ## Задача
 Реализовать программный модуль по методологии ООП для расчета и отображения информации
 о прошедшей тренировке по данным от блока датчиков.
