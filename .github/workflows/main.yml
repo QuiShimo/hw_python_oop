@@ -3,7 +3,7 @@ name: flake8 and pytest workflow
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   tests:
